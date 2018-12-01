@@ -3,8 +3,19 @@
   <head>
     <title>App</title>
     <meta charset="UTF-8">
+    <script type="text/javascript">
+     document.getElementById('openApp').onclick = function(e){
+      var ifr = document.createElement('iframe');
+      ifr.src = 'pawfit://share.pet';// app协议的地址
+      ifr.style.display = 'none';
+      document.body.appendChild(ifr);
+      window.setTimeOut(function(){
+        document.body.removeChild(ifr);
+      },3000);
+     }
+    </script>
   </head>
   <body>
-    <h4>你还没下载App</h4>
+    <a href="https://play.google.com/store/apps/details?id=com.latsen.pawfit" id="openApp">打开app</a>
   </body>
 </html>
