@@ -22,7 +22,7 @@
 
     function applink() {
         if (window.MessageEvent && !document.getBoxObjectFor) {
-            window.location = 'intent://pawfit/#Intent;scheme=intent;package=com.latsen.pawfit;S.token=' + getQueryVariable('token') + ';end'   
+            window.location = 'intent://pawfit/sharingpet/#Intent;scheme=intent;package=com.latsen.pawfit;S.token=' + getQueryVariable('token') + ';end'   
         } else {
             window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token');
         }
