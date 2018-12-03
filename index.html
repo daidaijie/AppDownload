@@ -22,7 +22,7 @@
 
     function applink() {
         if (window.MessageEvent && !document.getBoxObjectFor) {
-            window.location = 'intent://pawfit/sharingpet/#Intent;scheme=intent;package=com.latsen.pawfit;S.token=' + getQueryVariable('token') + ';end'   
+            window.location = 'intent://pawfit/sharingpet#Intent;scheme=intent;package=com.latsen.pawfit;S.token=' + getQueryVariable('token') + ';end'   
         } else {
             window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token');
         }
@@ -30,11 +30,11 @@
         var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
-                if (+new Date - clickedAt < 10000) {
+                if (+new Date - clickedAt < 3000) {
                     window.location = 'https://play.google.com/store/apps/details?id=com.latsen.pawfit';
                 }
-            }, 500);
-        }, 500)
+            }, 2000);
+        }, 2000)
 
     }
 
