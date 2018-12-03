@@ -33,7 +33,7 @@
         }, 500)
     }
     if (window.MessageEvent && !document.getBoxObjectFor) {
-        document.getElementById("openApp").href = "intent://sharingpet/" + getQueryVariable('token') + "#Intent;scheme=pawfit;package=com.latsen.pawfit;end";
+        document.getElementById("openApp").href = "intent://sharingpet/" + getQueryVariable('token') + "/#Intent;scheme=pawfit;package=com.latsen.pawfit;end";
         return 
     } else {
         applink();
