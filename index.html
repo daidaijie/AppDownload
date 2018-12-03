@@ -32,7 +32,8 @@
             }, 500);
         }, 500)
     }
-    if (window.MessageEvent && !document.getBoxObjectFor) {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (isChrome) {
         document.getElementById("openApp").href = "intent://sharingpet/#Intent;scheme=pawfit;package=com.latsen.pawfit;end";
         return 
     } else {
