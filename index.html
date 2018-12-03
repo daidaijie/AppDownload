@@ -22,8 +22,8 @@
     }
 
     function applink() {
-        window.location = 'pawfit://sharingpet/' + getQueryVariable('token');
-        var clickedAt = + new Date;
+        window.location = "pawfit://sharingpet/" + getQueryVariable('token');
+        var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
                 if (+new Date - clickedAt < 2000) {
