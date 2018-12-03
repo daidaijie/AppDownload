@@ -27,7 +27,7 @@
             document.getElementById("openApp").href = "intent://sharingpet/" + getQueryVariable('token') + "/#Intent;scheme=pawfit;package=com.latsen.pawfit;end";
             return;
         }
-        window.location = "pawfit://sharingpet/" + getQueryVariable('token');
+        window.location = "pawfit://sharingpet/" + getQueryVariable('token') + "/";
         var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
