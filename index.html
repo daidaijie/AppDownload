@@ -25,7 +25,7 @@
         var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
         if(isChrome) {
             document.getElementById("openApp").href = "intent://sharingpet/#Intent;scheme=pawfit;package=com.latsen.pawfit;S.token=" + getQueryVariable('token') + ";end";
-            document.getElementById('openApp').click();
+            return;
         } else {
             window.location = "pawfit://sharingpet/" + getQueryVariable('token');
         }
