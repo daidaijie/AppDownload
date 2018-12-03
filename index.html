@@ -27,7 +27,7 @@
     }
 
     function applink() {
-        window.location = 'pawfit://share.pet/index.html?token=' + getQueryVariable('token');
+        window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token');
         var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
