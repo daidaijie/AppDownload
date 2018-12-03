@@ -22,7 +22,7 @@
     }
 
     function applink() {
-        window.location = 'latsen://pawfit/sharingpet?token=' + getQueryVariable('token');
+        window.location = 'latsen://pawfit/' + getQueryVariable('token');
         var clickedAt = + new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
@@ -33,7 +33,7 @@
         }, 500)
     }
     if (window.MessageEvent && !document.getBoxObjectFor) {
-        document.getElementById("openApp").href = "intent://pawfit/sharingpet#Intent;scheme=latsen;S.token="+ getQueryVariable('token') +";package=com.latsen.pawfit;end";
+        document.getElementById("openApp").href = "intent://sharingpet/" + getQueryVariable('token') + "#Intent;scheme=pawfit;package=com.latsen.pawfit;end";
         return 
     } else {
         applink();
