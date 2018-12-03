@@ -27,7 +27,12 @@
     }
 
     function applink() {
-        window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token');
+        if (window.MessageEvent && !document.getBoxObjectFor) {
+            window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token') + '#Intent;scheme=intent;end'   
+        } else {
+            window.location = 'intent://pawfit/sharingpet?token=' + getQueryVariable('token');
+        }
+       
         var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
