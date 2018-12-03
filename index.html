@@ -7,7 +7,7 @@
         <title>Pawfit</title>
     </head>
 <body>
-<a id="openApp" href="intent://pawfit/#Intent;scheme=latsen;package=com.latsen.pawfit;end">Open app</a>
+<a id="openApp" href="intent://sharingpet/#Intent;scheme=pawfit;package=com.latsen.pawfit;end">Open app</a>
 <script type="text/javascript">
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -22,7 +22,7 @@
     }
 
     function applink() {
-        window.location = 'latsen://pawfit/' + getQueryVariable('token');
+        window.location = 'pawfit://sharingpet/' + getQueryVariable('token');
         var clickedAt = + new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
