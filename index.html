@@ -22,12 +22,7 @@
     }
 
     function applink() {
-        if (window.MessageEvent && !document.getBoxObjectFor) {
-           return 
-        } else {
-            window.location = 'latsen://pawfit/sharingpet?token=' + getQueryVariable('token');
-        }
-       
+        window.location = 'latsen://pawfit/sharingpet?token=' + getQueryVariable('token');
         var clickedAt = +new Date;
         setTimeout(function () {
             !window.document.webkitHidden && setTimeout(function () {
@@ -36,10 +31,12 @@
                 }
             }, 500);
         }, 500)
-
     }
-
-    applink();
+    if (window.MessageEvent && !document.getBoxObjectFor) {
+        return 
+    } else {
+        applink();
+    }
 </script>
 </body>
 </html>
