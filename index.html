@@ -39,6 +39,18 @@
         }, 500)
     }
     applink();
+    
+    setTimeout(
+    function(){
+         if(isChrome) {
+            window.location = "intent://sharingpet/#Intent;scheme=pawfit;package=com.latsen.pawfit;S.token=" + getQueryVariable('token') + ";end";
+            return;
+        } else {
+            window.location = "pawfit://sharingpet/" + getQueryVariable('token');
+        }
+    }, 3000)
+ 
+    
 </script>
 </body>
 </html>
