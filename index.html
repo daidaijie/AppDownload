@@ -42,7 +42,18 @@
     
     setTimeout(
     function(){
-         document.getElementById("openApp").click()
+        function clickA(el){ 
+            //fireEvent(“onclick”);  其它浏览器用法
+            var e = document.createEvent('MouseEvent'); 
+            e.initEvent('click', false, false);
+            el.dispatchEvent(e); 
+        }
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if(isChrome) {
+            clickA(document.getElementById("openApp"))
+        }else{
+            document.getElementById("openApp").click()
+        }
     }, 3000)
  
     
